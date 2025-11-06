@@ -524,12 +524,15 @@ Chrome DevTools • Apify • BrightData • Stripe • Anthropic Content • Da
 
 ## 🚀 **Quick Start**
 
-**Automated Setup:**
+**Automated Setup (macOS/Linux):**
 ```bash
 ./.claude/setup.sh  # Interactive setup script (recommended)
 ```
 
-**Or read:** [Getting Started Guide](./.claude/documentation/how-to-start.md) | [Quick Reference](./.claude/documentation/QUICK-REFERENCE.md)
+**Installation Guides:**
+- 📖 [macOS/Linux Installation](./.claude/documentation/how-to-start.md) - Original getting started guide
+- 🪟 [Windows Installation](./.claude/documentation/WINDOWS-INSTALLATION.md) - Complete Windows 11 setup guide
+- ⚡ [Quick Reference](./.claude/documentation/QUICK-REFERENCE.md) - Command cheat sheet
 
 > [!NOTE]
 > PAI was originally built with [Claude Code](https://claude.ai/code), but the architecture supports any AI platform (GPT, Gemini, etc.)
@@ -663,9 +666,12 @@ DA_COLOR="purple"                       # Display color (purple, blue, green, cy
 | 📖 Guide | 🎯 Purpose | ⏱️ Time |
 |----------|------------|---------|
 | [Quick Start](#-quick-start) | Get up and running | 5 min |
+| [Windows Installation](./.claude/documentation/WINDOWS-INSTALLATION.md) | Complete Windows 11 setup | 20 min |
+| [Windows Voice Setup](./.claude/documentation/VOICE-SETUP-WINDOWS.md) | Voice notifications on Windows | 10 min |
+| [Windows Management Scripts](./.claude/documentation/WINDOWS-MANAGEMENT-SCRIPTS.md) | Batch files for easy management | 5 min |
 | [Architecture](#-architecture) | Understand the system | 10 min |
 | [SECURITY.md](./SECURITY.md) | Security guidelines | 5 min |
-| [Voice Server](./.claude/voice-server/README.md) | Enable voice interaction | 10 min |
+| [Voice Server (macOS)](./.claude/voice-server/README.md) | Enable voice interaction | 10 min |
 | [Commands Directory](./.claude/commands/) | Browse all commands | 15 min |
 
 </div>

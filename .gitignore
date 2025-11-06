@@ -8,6 +8,16 @@ Icon
 .Trashes
 Library
 
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
 # Environment files
 .env
 .env.local
@@ -61,3 +71,31 @@ out/
 private/
 secrets/
 credentials/
+
+# PAI-specific sensitive data
+.claude/scratchpad/
+.claude/history.jsonl
+.claude/session-env/
+.claude/shell-snapshots/
+.claude/debug/
+.claude/statsig/
+.claude/todos/
+.claude/projects/
+.claude/.mcp.json
+.claude/settings.local.json
+
+# Voice server audio cache
+.claude/voice-server/audio-cache/
+.claude/voice-server/*.mp3
+.claude/voice-server/*.wav
+
+# User-specific batch files (not the templates)
+update-pai.bat
+stop-voice-server.bat
+pai-status.bat
+clean-scratchpad.bat
+backup-pai.bat
+
+# Backup directories
+PAI-Backups/
+backups/
