@@ -63,14 +63,24 @@
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [],
   "hooks": {
-    "PreToolUse": [],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type PreToolUse"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-tool-output.ts"
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type PostToolUse"
           }
         ]
       }
@@ -81,17 +91,24 @@
           {
             "type": "command",
             "command": "${PAI_DIR}/hooks/capture-session-summary.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type SessionEnd"
           }
         ]
       }
     ],
-    "Notification": [],
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
             "command": "${PAI_DIR}/hooks/update-tab-titles.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type UserPromptSubmit"
           }
         ]
       }
@@ -106,6 +123,10 @@
           {
             "type": "command",
             "command": "${PAI_DIR}/hooks/initialize-pai-session.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type SessionStart"
           }
         ]
       }
@@ -116,6 +137,10 @@
           {
             "type": "command",
             "command": "${PAI_DIR}/hooks/stop-hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type Stop"
           }
         ]
       }
@@ -126,6 +151,10 @@
           {
             "type": "command",
             "command": "${PAI_DIR}/hooks/subagent-stop-hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type SubagentStop"
           }
         ]
       }
@@ -137,6 +166,10 @@
           {
             "type": "command",
             "command": "${PAI_DIR}/hooks/context-compression-hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type PreCompact"
           }
         ]
       }
